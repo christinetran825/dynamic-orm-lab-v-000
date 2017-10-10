@@ -8,6 +8,7 @@ class InteractiveRecord
   end
 
   def column_names
+    DB[:conn].results_as_hash = true
     sql PRAGMA table_info(table.name)
   end
 
