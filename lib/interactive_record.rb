@@ -15,8 +15,8 @@ class InteractiveRecord
     table_info = DB[:conn].execute(sql)
     column_names = []
 
-    table_info.each do |column|
-      column_names << column["name"]
+    table_info.each do |column| #talbe_info returns a hash because of sql which is Pragma... 
+      column_names << column["name"] #collecting only the name key for the name column
     end
 
     column_names.compact
