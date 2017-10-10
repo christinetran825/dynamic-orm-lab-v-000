@@ -10,7 +10,7 @@ class InteractiveRecord
   def self.column_names
     DB[:conn].results_as_hash = true
 
-    sql = "PRAGMA table_info('#{table.name}')" #returns array of hashes describing the table itself where each hash has information about one column.
+    sql = "PRAGMA table_info('#{table_name}')" #returns array of hashes describing the table itself where each hash has information about one column.
 
     table_info = DB[:conn].execute(sql)
     column_names = []
