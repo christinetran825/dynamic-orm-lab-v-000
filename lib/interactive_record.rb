@@ -7,7 +7,9 @@ class InteractiveRecord
     self.to_s.downcase.pluralize
   end
 
-  
+  def column_names
+    sql PRAGMA table_info(table.name)
+  end
 
 
 
