@@ -3,11 +3,13 @@ require 'active_support/inflector'
 
 class InteractiveRecord
 
-  
+  def method_name
+
+  end
 
 
 
 
 
-  
+
 end
