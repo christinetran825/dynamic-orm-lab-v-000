@@ -32,7 +32,7 @@ class InteractiveRecord
     end
   end
 
-  def an_instance_method
+  def some_instance_method
     self.class.some_class_method
   end
 
