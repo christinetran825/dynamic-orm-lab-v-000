@@ -37,7 +37,7 @@ class InteractiveRecord
   end
 
   def column_name_for_insert
-    self.class.column_names
+    self.class.column_names.delete_if { |col| col == "id"}
   end
 
   def method_name
